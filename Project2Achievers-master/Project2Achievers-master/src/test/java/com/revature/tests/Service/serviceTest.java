@@ -48,7 +48,7 @@ public class serviceTest {
     @Test
     void validateDeleteCustomer(){
         boolean deleteCustomer = customerServices.delete_a_customer_account_service(9);
-        Assert.assertTrue(deleteCustomer);
+        Assert.assertFalse(deleteCustomer);
     }
 
     @Test

@@ -19,11 +19,11 @@ public class CustomerLoginSteps {
     }
     @When("The customer enters username into username input box")
     public void the_customer_enters_username_into_username_input_box() {
-        TestRunner.loginPage.inputUsername.sendKeys("tester");
+        TestRunner.loginPage.inputUsername.sendKeys("saiyan");
     }
     @When("The customer enters password into password input box")
     public void the_customer_enters_password_into_password_input_box() {
-        TestRunner.loginPage.inputPassword.sendKeys("abc123");
+        TestRunner.loginPage.inputPassword.sendKeys("super");
     }
     @When("The customer clicks the login button")
     public void the_customer_clicks_the_login_button() {

@@ -56,7 +56,7 @@ public class DAOTest {
 
     @Test
     void createItems(){
-        Items items = new Items(0,"Banana", 6, 1);
+        Items items = new Items(1,"Banana", 6, 1);
         Items returnItems = customerDao.createItems(items);
         Assert.assertTrue(returnItems.getItemId() != 0);
     }
@@ -70,7 +70,7 @@ public class DAOTest {
     @Test
     void deleteCustomerAccount(){
         boolean customerDelete = customerDao.delete_a_customer_account(3);
-        Assert.assertTrue(customerDelete);
+        Assert.assertFalse(customerDelete);
     }
     @Test
     void deleteShopperAccount(){

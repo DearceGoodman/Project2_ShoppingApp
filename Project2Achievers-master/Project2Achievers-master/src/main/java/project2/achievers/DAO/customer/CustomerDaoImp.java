@@ -98,7 +98,7 @@ public class CustomerDaoImp implements CustomerDao {
     @Override
     public Items createItems(Items items) {
         try (Connection connection = DatabaseConnection.createConnection()) {
-            String sql = "insert into items values(default,?, ?, ?)";
+            String sql = "insert into itemss values(default,?, ?, ?)";
             PreparedStatement preparedStatement = connection.prepareStatement(sql, Statement.RETURN_GENERATED_KEYS);
             preparedStatement.setString(1, items.getItemName());
             preparedStatement.setInt(2, items.getItemQuantity());
@@ -118,7 +118,7 @@ public class CustomerDaoImp implements CustomerDao {
     @Override
     public boolean deleteItems(int itemId) {
         try (Connection connection = DatabaseConnection.createConnection()) {
-            String sql = "delete from items  where item_id = ?";
+            String sql = "delete from itemss  where item_id = ?";
             PreparedStatement preparedStatement = connection.prepareStatement(sql);
             preparedStatement.setInt(1, itemId);
              return preparedStatement.executeUpdate() !=0;

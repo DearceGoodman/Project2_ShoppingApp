@@ -22,7 +22,9 @@ public class TestRunner {
     public static ShopperRegisterPage shopperRegisterPage;
     public static CustomerRegister customerRegister;
     public static CustomerDashboardPage customerDashboardPage;
+    public static  OrderCompleted orderCompleted;
     public static WebDriverWait explicitWait;
+    public static IncompletedList incompletedList;
 
     @BeforeClass
     public static void setup(){
@@ -33,7 +35,9 @@ public class TestRunner {
         shopperLoginPage = new ShopperLoginPage(driver);
         shopperRegisterPage = new ShopperRegisterPage(driver);
         customerDashboardPage = new CustomerDashboardPage(driver);
+        orderCompleted = new OrderCompleted(driver);
         customerRegister = new CustomerRegister(driver);
+
         System.out.println("The setup is completed");
         driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
         // this determines the time of the implicit wait
